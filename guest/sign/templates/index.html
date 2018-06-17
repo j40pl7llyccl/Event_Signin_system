@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Django Page</title>
+  </head>
+  <body>
+    <h1>發布會管理</h1>
+    
+<!--     <form method="get">
+      <input name="username" type="text" placeholder="username"><br>
+      <input name="password" type="password" placeholder="password"><br>
+      <button id="btn" type="submit">登入</button>
+    </form> -->
+
+    <form method="post" action="/login_action/">
+      <input name="username" type="text" placeholder="username"><br>
+      <input name="password" type="password" placeholder="password"><br>
+      {{ error }}<br>
+      <button id="btn" type="submit">登入</button>
+      {% csrf_token %}
+    </form>
+    
+  </body>
+</html>
